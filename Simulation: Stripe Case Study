@@ -1,6 +1,6 @@
 #Cyber Kill Chain Simulation: Stripe Case Study
 
-## Introduction
+##Introduction
 Stripe, a leading online payment processing platform, is a prime target for cyberattacks due to its vast repository of financial transactions, personal user data, and API integrations with businesses worldwide. This case study simulates a cyberattack against Stripe using the **Cyber Kill Chain** framework, a model developed by Lockheed Martin to identify and counteract cyber threats.
 
 ---
