@@ -1,1 +1,57 @@
+#Cyber Kill Chain Simulation: Stripe Case Study
 
+## Introduction
+Stripe, a leading online payment processing platform, is a prime target for cyberattacks due to its vast repository of financial transactions, personal user data, and API integrations with businesses worldwide. This case study simulates a cyberattack against Stripe using the **Cyber Kill Chain** framework, a model developed by Lockheed Martin to identify and counteract cyber threats.
+
+---
+
+## Phase 1: Reconnaissance
+**Objective:** Gather intelligence about Stripe’s infrastructure, technology stack, and potential vulnerabilities.
+
+**Simulated Attack:**
+- The attacker scours public sources (OSINT) such as LinkedIn, GitHub, and company job postings to identify employees, technologies in use (e.g., AWS, Kubernetes, PostgreSQL), and API documentation.
+- They use passive DNS analysis and subdomain enumeration to map out Stripe’s online assets.
+- Automated scanning tools detect outdated libraries used in Stripe’s frontend applications.
+
+**Defense Measures:**
+- Regular security awareness training to prevent employees from oversharing information.
+- Implementing Content Security Policy (CSP) headers to restrict domain exposure.
+- Continuous monitoring for unauthorized scanning activities.
+
+---
+
+## Phase 2: Weaponization
+**Objective:** Develop an exploit that can compromise Stripe’s systems.
+
+**Simulated Attack:**
+- The attacker identifies a vulnerable third-party JavaScript library used by Stripe’s checkout flow.
+- They craft a malicious payload leveraging a known Remote Code Execution (RCE) exploit.
+- The payload is embedded in a phishing email disguised as a Stripe system update for merchants.
+
+**Defense Measures:**
+- Ensuring strict dependency management with automated security patching.
+- Using Web Application Firewalls (WAF) to block malicious payloads.
+- Educating users to recognize phishing attempts.
+
+---
+
+## Phase 3: Delivery
+**Objective:** Deliver the malicious payload to Stripe’s environment.
+
+**Simulated Attack:**
+- The attacker sends phishing emails to Stripe’s customer support team containing an embedded malicious link.
+- A compromised merchant’s website injects a malicious script into the Stripe API integration.
+- The attacker uploads a trojanized npm package, hoping a Stripe developer unknowingly installs it.
+
+**Defense Measures:**
+- Implementing DMARC, DKIM, and SPF email security policies.
+- Sandboxing and scanning all inbound emails for malware.
+- Enforcing stringent npm package auditing policies.
+
+---
+
+## Phase 4: Exploitation
+**Objective:** Execute the exploit and gain initial access.
+
+**Simulated Attack:**
+- A customer support agent clicks on a malicious link, triggering an XSS attack that ex
